@@ -1,0 +1,20 @@
+.start-button {
+  display: flex;
+  justify-content: center;
+}
+
+/* .start-photo {
+  display: flex;
+  justify-content: center;
+} */
+.feedback {
+  text-align: center;
+}
+.correct {
+  background-color: #19a7d2;
+}
+.start-grid {
+  /* border: solid black 1px; */
+  display: grid;
+  grid-template-areas: ". photo header photo2 .";
+}
