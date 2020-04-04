@@ -13,7 +13,10 @@
 .correct {
   background-color: #19a7d2;
 }
-.start-grid {
+.incorrect {
+  background-color: lightcoral;
+}
+.main-screens {
   /* border: solid black 1px; */
   display: grid;
   grid-template-areas: ". photo header photo2 .";
