@@ -3,7 +3,7 @@
   justify-content: center;
 }
 
-/* .start-photo {
+/* .photo {
   display: flex;
   justify-content: center;
 } */
@@ -16,7 +16,7 @@
 .incorrect {
   background-color: lightcoral;
 }
-.main-screens {
+.start-end-screen .question-screen {
   /* border: solid black 1px; */
   display: grid;
   grid-template-areas: ". photo header photo2 .";

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="main-screens">
+    <div class="question-screen">
       <div style="grid-area: header">
         <p>Question 2 of 5</p>
         <p>1 correct, 0 incorrect</p>
@@ -22,7 +22,10 @@
           <input type="radio" id="pr" name="dance-type" value="PuertoRican" />
           <label for="pr">Puerto Rican</label>
         </form>
-        <button>Submit answer</button>
+        <div class="feedback"></div>
+        <div class="correct-answer">Correct answer is Cuban</div>
+        <button class="submit-answer">Submit answer</button>
+        <button class="next">Next</button>
       </div>
     </div>
   </body>

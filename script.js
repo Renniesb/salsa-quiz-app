@@ -91,6 +91,8 @@ function startQuiz() {
 
 function hideAllPages() {}
 
+function hideAllButtons() {}
+
 function resetQuizValues() {
   currentQuestionIndex = 0;
   correct = 0;
@@ -123,3 +125,9 @@ $(showStartPage);
 <button>Start a new Quiz</button> 
 */
 }
+//add feedback
+//<span class="correct">Correct</span>
+//<span class="incorrect">Incorrect</span>
+
+//create ids by taking out the spaces in a string
+//string.split(" ").join("")
