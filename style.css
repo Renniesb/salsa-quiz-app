@@ -1,4 +1,4 @@
-.start-button {
+#start-quiz #start-new-quiz {
   display: flex;
   justify-content: center;
 }
@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
 } */
-.feedback {
+.feedback .correct-answer {
   text-align: center;
 }
 .correct {
