@@ -1,18 +1,35 @@
 const questions = [
   {
-    questionText: "Whats your name?",
-    choices: ["John", "Jane", "ughg"],
-    correctAnswer: "John"
+    questionText:
+      "_____ was the record label responsible for the rise and increase in popularity of the salsa dance.",
+    choices: [
+      "Fania Records",
+      "Famous Records",
+      "Cuban Records",
+      "Masucci Records"
+    ],
+    correctAnswer: "Fania Records"
   },
   {
-    questionText: "Whats your name?",
-    choices: ["John", "Rennie", "ughg"],
-    correctAnswer: "John"
+    questionText: "The solo breaks during the performance are known as?",
+    choices: ["solos", "shines", "spotlights", "breaks"],
+    correctAnswer: "shines"
   },
   {
-    questionText: "Whats your name?",
-    choices: ["John", "Scott", "ughg"],
-    correctAnswer: "John"
+    questionText: "Who was dubbed the “Queen of Salsa”?",
+    choices: ["Gloria Estefan", "Celia Cruz", "La India", "Jennifer lopez"],
+    correctAnswer: "Celia Cruz"
+  },
+  {
+    questionText:
+      "Salsa is usually a lead-and-follow partnered dance, although solo forms like line dancing do exist. It’s called?",
+    choices: ["Salsa Suelta", "Salsa Solo", "Salsa Uno", "Salsa libre"],
+    correctAnswer: "Salsa Suelta"
+  },
+  {
+    questionText: "The most traditional salsa dance style is?",
+    choices: ["L.A", "Cali", "Cuban", "Puerto Rican"],
+    correctAnswer: "Cuban"
   }
 ];
 
@@ -30,8 +47,10 @@ function displayQuestion() {
   let questionHtml = `
   <p>Question ${currentQuestionIndex + 1} of ${totalQuestions}</p>
   <p class="score">${correct} correct, ${incorrect} incorrect</p>
+  <hr>
+  <br>
   <p>${questions[currentQuestionIndex].questionText}</p>
-  <form action="">
+  <form>
   ${showMultipleChoiceOptions()}
   </form>  
   `;
@@ -54,10 +73,8 @@ function displayEndPage() {
   hideAllButtons();
   $(".start-end-screen").show();
   $(".start-end-info").html(
-    `<h2>Salsa Dance Quiz</h2>
-    <p>${correct} of ${totalQuestions} correct</p>
-    <p>${questionPercentage}%</p>
-    <p>Thanks for playing</p>`
+    `<div>${correct} of ${totalQuestions} correct</div> <div>&nbsp;&nbsp;${questionPercentage}%&nbsp;&nbsp;</div>
+      <div>Thanks for playing.</div>`
   );
 
   $("#start-new-quiz").show();
@@ -97,12 +114,11 @@ function onAnswerSubmit() {
     event.preventDefault();
     event.stopImmediatePropagation();
     currentQuestionIndex = currentQuestionIndex + 1;
-    console.log("next loop", currentQuestionIndex);
+
+    emptyContents();
     if (currentQuestionIndex === totalQuestions) {
-      emptyContents();
       displayEndPage();
     } else {
-      emptyContents();
       displayQuestion();
     }
   });
@@ -141,7 +157,7 @@ function showMultipleChoiceOptions() {
   questions[currentQuestionIndex].choices.forEach(choice => {
     inputElement =
       inputElement +
-      `<label><input type="radio" name="dance-type" value=${choice} />
+      `<label><input type="radio" name="dance-type" value="${choice}" />
             ${choice}</label><br />`;
   });
   console.log("multiple choice loop", currentQuestionIndex);
@@ -163,15 +179,4 @@ function showStartPage() {
 
 $(showStartPage);
 
-// id=
-// start-quiz
-// new-quiz
-// submit-answer
-// next
 
-// class=
-// .start-end-screen
-// .question-screen
-// .feedback
-// .correct
-// .incorrect

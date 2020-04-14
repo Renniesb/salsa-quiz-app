@@ -4,29 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Salsa Quiz App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="start-end-screen">
-      <div style="grid-area: photo" class="photo">
-        <img src="https://via.placeholder.com/150" alt="salsa-image-2" />
-      </div>
-      <div style="grid-area: header">
+      <div class="salsa-dance-quiz" style="grid-area: header">
+        <h2>Salsa Dance Quiz</h2>
         <div class="start-end-info"></div>
-        <button id="start-quiz">Start Quiz</button>
-        <button id="start-new-quiz">Start a new Quiz</button>
-      </div>
-      <div style="grid-area: photo2" class="photo">
-        <img src="https://via.placeholder.com/150" alt="salsa-image-1" />
+        <div class="center-button"><button id="start-quiz"class="myButton">Start Quiz</button></div>
+        <div class="center-button"><button id="start-new-quiz"class="myButton">Start a new Quiz</button></div>
       </div>
     </div>
     <div class="question-screen">
-      <div style="grid-area: header">
+      <div style="grid-area: header;border: 1px solid #ddd;padding: 30px;">
         <div class="question-info"></div>
-        <div class="feedback"></div>
+        <div style="
+        margin-top: 10px;" class="feedback"></div>
         <div class="correct-answer"></div>
-        <button id="submit-answer">Submit answer</button>
-        <button id="next">Next</button>
+        <button id="submit-answer" class="myButton">Submit answer</button>
+        <button id="next"class="myButton">Next</button>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
