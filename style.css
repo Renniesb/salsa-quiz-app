@@ -15,7 +15,8 @@
 
 .question-screen img{
   /* height: 10vh; */
-  width: 10vw;
+  width: 9vw;
+  height:18vh;
 
 }
 
@@ -115,7 +116,7 @@ text-align: center;
 	top:1px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .question-screen  {
 
     display: grid;
@@ -130,6 +131,7 @@ text-align: center;
   .question-screen img{
     /* height: 10vh; */
     width: 19vw;
+    height:19vh;
   
   }
 }
