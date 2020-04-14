@@ -12,6 +12,17 @@
   margin-top: 10px;
   text-align: center;
 }
+
+.question-screen img{
+  /* height: 10vh; */
+  width: 10vw;
+
+}
+
+.question-img{
+  display: flex;
+  justify-content: space-evenly;
+}
 .correct {
   background-color: #19a7d2a8;
 }
@@ -49,6 +60,22 @@ text-align: center;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: ".header header.";
 
+}
+
+.question-screen h3 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.question-screen h4 {
+    margin: 0px;
+    margin-bottom: 15px;
+    text-align: center;
+    background:aliceblue;
+    margin: 0px;
+}
+.question-screen h5,.question-screen h2,.question-screen hr {
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 
@@ -100,5 +127,9 @@ text-align: center;
   #start-quiz {
     margin: 150px 50px auto;
   }
-
+  .question-screen img{
+    /* height: 10vh; */
+    width: 19vw;
+  
+  }
 }

@@ -45,10 +45,15 @@ function displayQuestion() {
   hideAllButtons();
   $(".question-screen").show();
   let questionHtml = `
-  <p>Question ${currentQuestionIndex + 1} of ${totalQuestions}</p>
-  <p class="score">${correct} correct, ${incorrect} incorrect</p>
+  <div class="question-img">
+    <img src="img/salsa_1.jpg" alt="salsa image 1">
+    <img src="img/salsa_2.jpg" alt="salsa image 2">
+    <img src="img/salsa_3.jpg" alt="salsa image 3">
+    <img src="img/salsa_4.jpg" alt="salsa image 4">
+  </div>
+  <h3>Question ${currentQuestionIndex + 1} of ${totalQuestions}</h3>
+  <h5 class="score">${correct} correct, ${incorrect} incorrect</h5>
   <hr>
-  <br>
   <p>${questions[currentQuestionIndex].questionText}</p>
   <form>
   ${showMultipleChoiceOptions()}
@@ -160,7 +165,6 @@ function showMultipleChoiceOptions() {
       `<label><input type="radio" name="dance-type" value="${choice}" />
             ${choice}</label><br />`;
   });
-  console.log("multiple choice loop", currentQuestionIndex);
   return inputElement;
 }
 

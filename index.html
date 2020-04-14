@@ -8,24 +8,25 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="start-end-screen">
+    <section class="start-end-screen">
       <div class="salsa-dance-quiz" style="grid-area: header">
         <h2>Salsa Dance Quiz</h2>
-        <div class="start-end-info"></div>
-        <div class="center-button"><button id="start-quiz"class="myButton">Start Quiz</button></div>
-        <div class="center-button"><button id="start-new-quiz"class="myButton">Start a new Quiz</button></div>
+        <header class="start-end-info"></header>
+        <div class="center-button"><button id="start-quiz" class="myButton">Start Quiz</button></div>
+        <div class="center-button"><button id="start-new-quiz" class="myButton">Start a new Quiz</button></div>
       </div>
-    </div>
-    <div class="question-screen">
+    </section>
+    <section class="question-screen">
       <div style="grid-area: header;border: 1px solid #ddd;padding: 30px;">
-        <div class="question-info"></div>
+        <h4>Salsa Dance Quiz</h4>
+        <header class="question-info"></header>
         <div style="
         margin-top: 10px;" class="feedback"></div>
         <div class="correct-answer"></div>
         <button id="submit-answer" class="myButton">Submit answer</button>
-        <button id="next"class="myButton">Next</button>
+        <button id="next" class="myButton">Next</button>
       </div>
-    </div>
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
